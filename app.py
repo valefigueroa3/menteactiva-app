@@ -48,14 +48,14 @@ st.markdown("""
         }
         .banner h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.8rem !important;
+            font-size: 2rem !important;
             color: #FFFFFF !important;
-            margin: 0 0 0.4rem 0;
+            margin: 0 0 0.3rem 0;
             letter-spacing: 1px;
             text-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
         .banner p {
-            font-size: 1.15rem;
+            font-size: 0.95rem;
             color: #D9E8F5;
             margin: 0;
             font-weight: 300;
@@ -120,16 +120,40 @@ st.markdown("""
             color: #2D2D2D !important;
         }
 
-        /* Fondo del menú desplegable */
+        /* Fondo del menú desplegable — fuerza blanco y letra oscura */
         [data-baseweb="popover"],
-        [data-baseweb="menu"] {
+        [data-baseweb="popover"] > div,
+        [data-baseweb="menu"],
+        [data-baseweb="menu"] > ul,
+        [data-baseweb="menu"] li,
+        ul[role="listbox"],
+        ul[role="listbox"] li,
+        div[role="option"],
+        div[role="listbox"] {
             background-color: #FFFFFF !important;
+            color: #2D2D2D !important;
+        }
+
+        /* Todo el texto dentro del desplegable */
+        [data-baseweb="popover"] *,
+        [data-baseweb="menu"] *,
+        ul[role="listbox"] *,
+        div[role="option"] * {
+            color: #2D2D2D !important;
+            background-color: transparent !important;
         }
 
         /* Opción seleccionada dentro del menú */
-        [data-baseweb="menu"] [aria-selected="true"] {
+        [data-baseweb="menu"] [aria-selected="true"],
+        div[role="option"][aria-selected="true"] {
             background-color: #E8F0F9 !important;
             color: #3D5A80 !important;
+        }
+
+        /* Hover sobre opciones */
+        [data-baseweb="menu"] li:hover,
+        div[role="option"]:hover {
+            background-color: #F0F5FA !important;
         }
 
         /* Slider */
