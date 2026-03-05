@@ -105,6 +105,33 @@ st.markdown("""
             font-size: 1.05rem !important;
         }
 
+        /* Texto visible en selectbox — corrige letra blanca en móvil */
+        .stSelectbox > div > div > div,
+        .stSelectbox > div > div > div *,
+        .stSelectbox span,
+        .stSelectbox p,
+        [data-baseweb="select"] *,
+        [data-baseweb="select"] span,
+        [data-baseweb="select"] div,
+        [data-baseweb="popover"] li,
+        [data-baseweb="popover"] span,
+        [data-baseweb="menu"] li,
+        [data-baseweb="menu"] span {
+            color: #2D2D2D !important;
+        }
+
+        /* Fondo del menú desplegable */
+        [data-baseweb="popover"],
+        [data-baseweb="menu"] {
+            background-color: #FFFFFF !important;
+        }
+
+        /* Opción seleccionada dentro del menú */
+        [data-baseweb="menu"] [aria-selected="true"] {
+            background-color: #E8F0F9 !important;
+            color: #3D5A80 !important;
+        }
+
         /* Slider */
         .stSlider > div > div > div > div {
             background-color: #3D5A80 !important;
